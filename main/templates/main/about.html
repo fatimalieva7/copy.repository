@@ -1,4 +1,4 @@
-{% extends 'main/base.html' %}
+{% extends 'main/index.html' %}
 {% load static %}
 
 
@@ -9,7 +9,11 @@
 
 
 {% block page_title %}
-<h1 class="mt-5 pt-5"><strong>{{ content }}</strong></h1>
+    <div class="mt-5 pt-5 bg-white custom-shadow rounded">
+        <h2 class="m-2"><strong>{{ content}}</strong></h2>
+        <p class="m-2">{{ text_on_page }}</p>
+    </div>
+
 {% endblock %}
 
 {% block footer %}
