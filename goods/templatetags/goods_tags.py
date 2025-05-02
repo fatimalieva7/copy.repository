@@ -2,6 +2,8 @@
 from goods.models import Categories
 from django import template
 from django.utils.http import urlencode
+
+
 register = template.Library()
 
 @register.simple_tag()
@@ -14,4 +16,4 @@ def tag_categories():
 def change_params(context, **kwargs):
     query = context['request'].GET.dict()
     query.update(kwargs)
-    query = urlencode(query)
+    return urlencode(query)
